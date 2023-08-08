@@ -3,9 +3,9 @@ import './App.css';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 //import page & components
-import Dashboard from './Components/Dashboard';
-import Dashboard2 from './Components/Dashboard2';
-import DashboardNew from './Components/DashboardNew';
+import Dashboard from './Pages/Dashboard';
+import Dashboard2 from './Pages/Dashboard2';
+import DashboardNew from './Pages/DashboardNew';
 
 export default function App() {
   return (
