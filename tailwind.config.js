@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
+    "./src/**/*.{js,jsx,ts,tsx,html}",
     'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'
   ],
   theme: {
@@ -33,6 +33,10 @@ module.exports = {
         '900': '#3a3c3f',
         '950': '#242628',
       },
+      'background': {
+        '50': '#DEE2E6',
+      },
+      
     }
   },
   plugins: [
