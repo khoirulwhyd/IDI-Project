@@ -2,7 +2,8 @@
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx,html}",
-    'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'
+    'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}',
+    "./node_modules/tw-elements/dist/js/**/*.js"
   ],
   theme: {
     extend: {},
@@ -36,10 +37,14 @@ module.exports = {
       'background': {
         '50': '#DEE2E6',
       },
+      'gradasi': {
+        '50': '#1A8187',
+      }
       
     }
   },
   plugins: [
-    require('flowbite/plugin')
+    require('flowbite/plugin'),
+    [require("tw-elements/dist/plugin.cjs")],
   ],
 }

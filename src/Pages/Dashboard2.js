@@ -12,9 +12,13 @@ import {
     AccordionHeader,
     AccordionBody,
 } from "@material-tailwind/react";
+import {
+    Chart,
+    initTE,
+} from "tw-elements";
 export default function Dashboard2() {
     const [open, setOpen] = React.useState(0);
-
+    initTE({ Chart });
     const handleOpen = (value) => {
         setOpen(open === value ? 0 : value);
     };
@@ -30,7 +34,7 @@ export default function Dashboard2() {
                                     <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
                                 </svg>
                             </button>
-                            <a href="https://flowbite.com" class="flex ml-2 md:mr-24">
+                            <a href="#" class="flex ml-2 md:mr-24">
                                 <img src="/Asset/Logo.svg" class="h-8 mr-3" alt="FlowBite Logo" />
                                 <span class="self-center text-xl font-bold text-primary-800 sm:text-1xl whitespace-nowrap dark:text-white">IDI Malang Raya</span>
                             </a>
@@ -90,12 +94,12 @@ export default function Dashboard2() {
             <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700" aria-label="Sidebar">
                 <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
                     <ul class="space-y-2 font-medium">
-                        <li>
-                            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M15.6667 9.33452V9.33334V4.66667C15.6667 4.4623 15.7304 4.31417 15.8562 4.18839C15.9819 4.06267 16.1293 3.99952 16.3322 4H16.3333H23.3333C23.5377 4 23.6858 4.06377 23.8116 4.18956C23.9373 4.31528 24.0005 4.46264 24 4.66549V4.66667V9.33334C24 9.53771 23.9362 9.68583 23.8104 9.81162C23.6847 9.93734 23.5374 10.0005 23.3345 10H23.3333H16.3333C16.129 10 15.9808 9.93623 15.8551 9.81045C15.7293 9.68473 15.6662 9.53737 15.6667 9.33452ZM4 14.0012V14V4.66667C4 4.4623 4.06377 4.31417 4.18956 4.18839C4.31528 4.06267 4.46264 3.99952 4.66549 4V4H4.66667H11.6667C11.871 4 12.0192 4.06377 12.145 4.18956C12.2707 4.31528 12.3338 4.46264 12.3333 4.66549V4.66667V14C12.3333 14.2044 12.2696 14.3525 12.1438 14.4783C12.0181 14.604 11.8707 14.6672 11.6678 14.6667H11.6667H4.66667C4.4623 14.6667 4.31417 14.6029 4.18839 14.4771C4.06267 14.3514 3.99952 14.204 4 14.0012ZM15.6667 23.3345V23.3333V14C15.6667 13.7956 15.7304 13.6475 15.8562 13.5217C15.9819 13.396 16.1293 13.3329 16.3322 13.3333H16.3333H23.3333C23.5377 13.3333 23.6858 13.3971 23.8116 13.5229C23.9373 13.6486 24.0005 13.796 24 13.9988V14V23.3333C24 23.5377 23.9362 23.6858 23.8104 23.8116C23.6847 23.9373 23.5374 24.0005 23.3345 24H23.3333H16.3333C16.129 24 15.9808 23.9362 15.8551 23.8104C15.7293 23.6847 15.6662 23.5374 15.6667 23.3345ZM4 23.3345V23.3333V18.6667C4 18.4623 4.06377 18.3142 4.18956 18.1884C4.31528 18.0627 4.46264 17.9995 4.66549 18H4.66667H11.6667C11.871 18 12.0192 18.0638 12.145 18.1896C12.2707 18.3153 12.3338 18.4626 12.3333 18.6655V18.6667V23.3333C12.3333 23.5377 12.2696 23.6858 12.1438 23.8116C12.0181 23.9373 11.8707 24.0005 11.6678 24H11.6667H4.66667C4.4623 24 4.31417 23.9362 4.18839 23.8104C4.06267 23.6847 3.99952 23.5374 4 23.3345Z" fill="#495057" stroke="#495057" />
+                        <li class="bg-primary-600 rounded-sm">
+                            <a href="#" class="flex items-center p-2 text-gray-50 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                    <path d="M15.6667 9.33452V9.33334V4.66667C15.6667 4.4623 15.7304 4.31417 15.8562 4.18839C15.9819 4.06267 16.1293 3.99952 16.3322 4H16.3333H23.3333C23.5377 4 23.6858 4.06377 23.8116 4.18956L24.1641 3.83707L23.8116 4.18956C23.9373 4.31528 24.0005 4.46264 24 4.66549V4.66667V9.33334C24 9.53771 23.9362 9.68583 23.8105 9.81162L24.164 10.1652L23.8104 9.81162C23.6847 9.93734 23.5374 10.0005 23.3345 10H23.3333H16.3333C16.129 10 15.9808 9.93623 15.8551 9.81045C15.7293 9.68473 15.6662 9.53737 15.6667 9.33452ZM4 14.0012V14V4.66667C4 4.4623 4.06377 4.31417 4.18956 4.18839C4.31528 4.06267 4.46264 3.99952 4.66549 4V4H4.66667H11.6667C11.871 4 12.0192 4.06377 12.1449 4.18956C12.2707 4.31528 12.3338 4.46264 12.3333 4.66549V4.66667V14C12.3333 14.2044 12.2696 14.3525 12.1438 14.4783C12.0181 14.604 11.8707 14.6672 11.6678 14.6667H11.6667H4.66667C4.4623 14.6667 4.31417 14.6029 4.18839 14.4771C4.06267 14.3514 3.99952 14.204 4 14.0012ZM15.6667 23.3345V23.3333V14C15.6667 13.7956 15.7304 13.6475 15.8562 13.5217C15.9819 13.396 16.1293 13.3329 16.3322 13.3333H16.3333H23.3333C23.5377 13.3333 23.6858 13.3971 23.8116 13.5229C23.9373 13.6486 24.0005 13.796 24 13.9988V14V23.3333C24 23.5377 23.9362 23.6858 23.8105 23.8116L24.164 24.1652L23.8104 23.8116C23.6847 23.9373 23.5374 24.0005 23.3345 24H23.3333H16.3333C16.129 24 15.9808 23.9362 15.8551 23.8105C15.7293 23.6847 15.6662 23.5374 15.6667 23.3345ZM4.18839 23.8105L3.83532 24.1635L4.18839 23.8104C4.06267 23.6847 3.99952 23.5374 4 23.3345V23.3333V18.6667C4 18.4623 4.06377 18.3142 4.18956 18.1884C4.31528 18.0627 4.46264 17.9995 4.66549 18H4.66667H11.6667C11.871 18 12.0192 18.0638 12.1449 18.1896C12.2707 18.3153 12.3338 18.4626 12.3333 18.6655V18.6667V23.3333C12.3333 23.5377 12.2696 23.6858 12.1438 23.8116C12.0181 23.9373 11.8707 24.0005 11.6678 24H11.6667H4.66667C4.4623 24 4.31417 23.9362 4.18839 23.8105Z" fill="#F8F9FA" stroke="#F8F9FA" />
                                 </svg>
-                                <span class="ml-3 text-sm">Dashboard</span>
+                                <span class="ml-3 text-sm ">Dashboard</span>
                             </a>
                         </li>
                         <li>
@@ -148,7 +152,7 @@ export default function Dashboard2() {
             <div class="p-4 sm:ml-64">
                 <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
                     <div class="grid grid-cols-3 gap-4 mb-4">
-                        {/* card rumah sakit */}
+                        {/*start card rumah sakit */}
                         <div class="max-w-full h-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                             <div className="section-icon flex items-start justify-start mb-4">
                                 <div className="icon">
@@ -176,6 +180,8 @@ export default function Dashboard2() {
                                 </div>
                             </a>
                         </div>
+                        {/* end card rumahsakit  */}
+                        {/* start card puskesmas */}
                         <div class="max-w-full h-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                             <div className="section-icon flex items-start justify-start mb-4">
                                 <div className="icon">
@@ -204,6 +210,7 @@ export default function Dashboard2() {
                                 </div>
                             </a>
                         </div>
+                        {/* end card puskesmas */}
                         <div class="max-w-full h-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                             <div className="section-icon flex items-start justify-start mb-4">
                                 <div className="icon">
@@ -238,48 +245,161 @@ export default function Dashboard2() {
                         
                     </div>
                     <div class="grid grid-cols-0 gap-4 mb-4">
-                        {/* card rumah sakit */}
+                        {/* Persebaran dokter */}
                         <div class="max-w-full h-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                             <div className="section-icon flex items-start justify-start mb-4">
                                 <div className="icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.875 5.77079C16.875 4.60079 16.875 4.01496 16.5942 3.59496C16.4725 3.4129 16.3162 3.25659 16.1342 3.13496C15.7667 2.88913 15.2725 2.85829 14.3717 2.85496C14.375 3.09746 14.375 3.35163 14.375 3.61329V4.72913H15.2083C15.3741 4.72913 15.5331 4.79497 15.6503 4.91218C15.7675 5.02939 15.8333 5.18837 15.8333 5.35413C15.8333 5.51989 15.7675 5.67886 15.6503 5.79607C15.5331 5.91328 15.3741 5.97913 15.2083 5.97913H14.375V7.22913H15.2083C15.3741 7.22913 15.5331 7.29497 15.6503 7.41218C15.7675 7.52939 15.8333 7.68837 15.8333 7.85413C15.8333 8.01989 15.7675 8.17886 15.6503 8.29607C15.5331 8.41328 15.3741 8.47913 15.2083 8.47913H14.375V9.72913H15.2083C15.3741 9.72913 15.5331 9.79497 15.6503 9.91218C15.7675 10.0294 15.8333 10.1884 15.8333 10.3541C15.8333 10.5199 15.7675 10.6789 15.6503 10.7961C15.5331 10.9133 15.3741 10.9791 15.2083 10.9791H14.375V16.3958H13.125V3.68746C13.125 2.11579 13.125 1.33079 12.6367 0.842459C12.1483 0.354126 11.3633 0.354126 9.79167 0.354126H8.125C6.55333 0.354126 5.76833 0.354126 5.28 0.842459C4.79167 1.33079 4.79167 2.11579 4.79167 3.68746V16.3958H3.54167V10.9791H2.70833C2.54257 10.9791 2.3836 10.9133 2.26639 10.7961C2.14918 10.6789 2.08333 10.5199 2.08333 10.3541C2.08333 10.1884 2.14918 10.0294 2.26639 9.91218C2.3836 9.79497 2.54257 9.72913 2.70833 9.72913H3.54167V8.47913H2.70833C2.54257 8.47913 2.3836 8.41328 2.26639 8.29607C2.14918 8.17886 2.08333 8.01989 2.08333 7.85413C2.08333 7.68837 2.14918 7.52939 2.26639 7.41218C2.3836 7.29497 2.54257 7.22913 2.70833 7.22913H3.54167V5.97913H2.70833C2.54257 5.97913 2.3836 5.91328 2.26639 5.79607C2.14918 5.67886 2.08333 5.51989 2.08333 5.35413C2.08333 5.18837 2.14918 5.02939 2.26639 4.91218C2.3836 4.79497 2.54257 4.72913 2.70833 4.72913H3.54167V3.61246C3.54167 3.35163 3.54167 3.09746 3.545 2.85413C2.64417 2.85829 2.15 2.88913 1.7825 3.13496C1.60044 3.25659 1.44413 3.4129 1.3225 3.59496C1.04167 4.01496 1.04167 4.60079 1.04167 5.77079V16.3958H0.625C0.45924 16.3958 0.300269 16.4616 0.183058 16.5788C0.065848 16.6961 0 16.855 0 17.0208C0 17.1866 0.065848 17.3455 0.183058 17.4627C0.300269 17.5799 0.45924 17.6458 0.625 17.6458H17.2917C17.4574 17.6458 17.6164 17.5799 17.7336 17.4627C17.8508 17.3455 17.9167 17.1866 17.9167 17.0208C17.9167 16.855 17.8508 16.6961 17.7336 16.5788C17.6164 16.4616 17.4574 16.3958 17.2917 16.3958H16.875V5.77079ZM8.95833 2.22913C9.12409 2.22913 9.28306 2.29497 9.40027 2.41218C9.51748 2.52939 9.58333 2.68837 9.58333 2.85413V3.89579H10.625C10.7908 3.89579 10.9497 3.96164 11.0669 4.07885C11.1842 4.19606 11.25 4.35503 11.25 4.52079C11.25 4.68655 11.1842 4.84552 11.0669 4.96273C10.9497 5.07994 10.7908 5.14579 10.625 5.14579H9.58333V6.18746C9.58333 6.35322 9.51748 6.51219 9.40027 6.6294C9.28306 6.74661 9.12409 6.81246 8.95833 6.81246C8.79257 6.81246 8.6336 6.74661 8.51639 6.6294C8.39918 6.51219 8.33333 6.35322 8.33333 6.18746V5.14579H7.29167C7.12591 5.14579 6.96694 5.07994 6.84973 4.96273C6.73251 4.84552 6.66667 4.68655 6.66667 4.52079C6.66667 4.35503 6.73251 4.19606 6.84973 4.07885C6.96694 3.96164 7.12591 3.89579 7.29167 3.89579H8.33333V2.85413C8.33333 2.68837 8.39918 2.52939 8.51639 2.41218C8.6336 2.29497 8.79257 2.22913 8.95833 2.22913ZM6.66667 8.68746C6.66667 8.5217 6.73251 8.36273 6.84973 8.24552C6.96694 8.12831 7.12591 8.06246 7.29167 8.06246H10.625C10.7908 8.06246 10.9497 8.12831 11.0669 8.24552C11.1842 8.36273 11.25 8.5217 11.25 8.68746C11.25 8.85322 11.1842 9.01219 11.0669 9.1294C10.9497 9.24661 10.7908 9.31246 10.625 9.31246H7.29167C7.12591 9.31246 6.96694 9.24661 6.84973 9.1294C6.73251 9.01219 6.66667 8.85322 6.66667 8.68746ZM6.66667 11.1875C6.66667 11.0217 6.73251 10.8627 6.84973 10.7455C6.96694 10.6283 7.12591 10.5625 7.29167 10.5625H10.625C10.7908 10.5625 10.9497 10.6283 11.0669 10.7455C11.1842 10.8627 11.25 11.0217 11.25 11.1875C11.25 11.3532 11.1842 11.5122 11.0669 11.6294C10.9497 11.7466 10.7908 11.8125 10.625 11.8125H7.29167C7.12591 11.8125 6.96694 11.7466 6.84973 11.6294C6.73251 11.5122 6.66667 11.3532 6.66667 11.1875ZM8.95833 13.8958C9.12409 13.8958 9.28306 13.9616 9.40027 14.0788C9.51748 14.1961 9.58333 14.355 9.58333 14.5208V16.3958H8.33333V14.5208C8.33333 14.355 8.39918 14.1961 8.51639 14.0788C8.6336 13.9616 8.79257 13.8958 8.95833 13.8958Z" fill="#005FDB" />
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.3708 4.67507C12.3708 6.21329 11.9885 8.21951 11.4005 7.91507C11.1601 8.70027 10.6553 9.37806 9.97188 9.83334C9.28845 10.2886 8.46851 10.4933 7.65129 10.4127C6.83406 10.3321 6.06992 9.97112 5.48863 9.39108C4.90733 8.81103 4.5447 8.04768 4.46232 7.23062C3.87877 6.20974 3.11344 4.16396 5.08099 2.56929C5.11655 2.55773 5.13788 2.46174 5.16988 2.3204C5.29166 1.78574 5.56144 0.597291 7.26321 0.824402C8.57566 0.999068 12.3708 1.6764 12.3708 4.67507ZM10.6792 5.64485C10.6792 5.64485 10.4783 6.2324 10.6668 6.88707C10.6643 7.58511 10.3883 8.25435 9.89787 8.75112C9.40748 9.24789 8.74185 9.53256 8.04391 9.54402C7.34596 9.55549 6.67134 9.29282 6.1649 8.81243C5.65846 8.33203 5.36058 7.6722 5.33521 6.97462C5.39966 6.73018 5.39966 6.3164 5.39921 5.8564C5.39877 5.02662 5.39788 4.04751 5.77788 3.6484C8.43966 5.42129 10.6792 5.64485 10.6792 5.64485Z" fill="#005FDB" />
+                                        <path d="M3.11111 14.5374C3.11111 14.0565 3.36578 13.6351 3.748 13.4005C3.73344 13.3452 3.71981 13.2896 3.70711 13.2338C3.63967 12.9302 3.58701 12.6234 3.54933 12.3147C3.51115 12.0189 3.48815 11.7213 3.48044 11.4231C1.60444 12.1596 0 13.4431 0 14.7907V17.204H16V14.7907C16 13.5 14.5289 12.2685 12.7564 11.5196V11.532C12.7644 11.8031 12.7493 12.1143 12.72 12.4134C12.6933 12.6907 12.6538 12.9671 12.6062 13.204H12.8889C12.9714 13.2041 13.0523 13.2271 13.1225 13.2705C13.1926 13.3139 13.2493 13.376 13.2862 13.4498L13.7307 14.3387C13.7618 14.4005 13.7778 14.4685 13.7778 14.5374V15.4263C13.7778 15.5441 13.731 15.6572 13.6476 15.7405C13.5643 15.8239 13.4512 15.8707 13.3333 15.8707H12.4444V14.9818H12.8889V14.6423L12.6142 14.0929H11.3858L11.1111 14.6423V14.9818H11.5556V15.8707H10.6667C10.5488 15.8707 10.4357 15.8239 10.3524 15.7405C10.269 15.6572 10.2222 15.5441 10.2222 15.4263V14.5374C10.2222 14.4685 10.2382 14.4005 10.2693 14.3387L10.7138 13.4498C10.7507 13.376 10.8074 13.3139 10.8775 13.2705C10.9477 13.2271 11.0286 13.2041 11.1111 13.204H11.6956C11.7053 13.1658 11.7151 13.1236 11.7249 13.0769C11.7693 12.8676 11.8089 12.6023 11.8356 12.328C11.8622 12.0534 11.8747 11.7809 11.868 11.5569C11.8663 11.4641 11.8591 11.3715 11.8462 11.2796C11.8364 11.2165 11.8267 11.1876 11.8249 11.1814C11.8244 11.18 11.824 11.1796 11.8249 11.1805L11.8262 11.18C11.5904 11.1068 11.3519 11.0426 11.1111 10.9876C10.8876 10.9365 10.6564 11.244 10.5556 11.4365H5.33333C5.32036 11.4117 5.30761 11.3868 5.29511 11.3618C5.20089 11.1743 5.08489 10.9427 4.88889 10.9876C4.71778 11.0263 4.54667 11.0707 4.37556 11.1196C4.37004 11.1975 4.36767 11.2757 4.36844 11.3538C4.37022 11.5996 4.39378 11.9005 4.43156 12.2045C4.46933 12.5076 4.52044 12.8027 4.57378 13.0356C4.58889 13.1027 4.604 13.1631 4.61822 13.2151C4.87232 13.2485 5.1114 13.3545 5.30685 13.5202C5.50231 13.686 5.64585 13.9046 5.72029 14.1498C5.79473 14.395 5.79692 14.6565 5.7266 14.903C5.65627 15.1494 5.51642 15.3704 5.32377 15.5394C5.13112 15.7084 4.89384 15.8183 4.64034 15.856C4.38684 15.8936 4.12786 15.8574 3.89441 15.7517C3.66095 15.646 3.46291 15.4752 3.32399 15.2598C3.18507 15.0445 3.11116 14.7936 3.11111 14.5374Z" fill="#005FDB" />
+                                        <path d="M4.88889 14.5373C4.88889 14.7924 4.68356 14.9884 4.44444 14.9884C4.20533 14.9884 4 14.7928 4 14.5373C4 14.2822 4.20533 14.0862 4.44444 14.0862C4.68356 14.0862 4.88889 14.2817 4.88889 14.5373Z" fill="#005FDB" />
                                     </svg>
                                 </div>
 
                                 <p class="px-2 text-lg justify-center font-semibold text-gray-500">
-                                    Rumah Sakit
+                                    Persebaan Dokter Spesialis di Malang Raya
                                 </p>
                             </div>
-                            <a href="#">
-                                <h5 class="mb-2 text-4xl font-semibold tracking-tight text-gray-900 dark:text-white">50</h5>
-                            </a>
-                            <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Di semua kecamatan sudah berdiri rumah sakit</p>
-                            <a href="#" class="inline-flex items-center text-blue-600 hover:underline">
-                                Lihat Semua Data
-                                <div class="arrowRight">
-                                    {/* ctaicon */}
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9" viewBox="0 0 11 9" fill="none">
-                                        <path d="M10.3438 4.32861L0.96875 4.32861" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M6.56274 0.56337L10.344 4.32837L6.56274 8.09399" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                            </a>
+                            <div class="mx-auto w-full overflow-hidden">
+                                <canvas
+                                    data-te-chart="bar"
+                                    data-te-dataset-label="Traffic"
+                                    data-te-labels="['Monday', 'Tuesday' , 'Wednesday' , 'Thursday' , 'Friday' , 'Saturday' , 'Sunday ', 'Sunday ', 'Sunday ']"
+                                    data-te-dataset-data="[2112, 2343, 2545, 3423, 2365, 1985, 987, 4000, 4566]">
+                                </canvas>
+                            </div>
+                            
                         </div>
-                        
-                        
-
-
-
-
                     </div>
-                    <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
-                        <p class="text-2xl text-gray-400 dark:text-gray-500">
-                            <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16" />
-                            </svg>
-                        </p>
-                    </div>
+                    {/* <div class="flex flex-col items-center w-full max-w-screen-md p-6 pb-6 mt-10 bg-white rounded-lg shadow-xl sm:p-8">
+                        <h2 class="text-xl font-bold">Monthly Revenue</h2>
+                        <span class="text-sm font-semibold text-gray-500">2020</span>
+                        <div class="flex items-end flex-grow w-full mt-2 space-x-2 sm:space-x-3">
+                            <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                                <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$37,500</span>
+                                <div class="flex items-end w-full">
+                                    <div class="relative flex justify-center flex-grow h-8 bg-indigo-200"></div>
+                                    <div class="relative flex justify-center flex-grow h-6 bg-indigo-300"></div>
+                                    <div class="relative flex justify-center flex-grow h-16 bg-indigo-400"></div>
+                                </div>
+                                <span class="absolute bottom-0 text-xs font-bold">Jan</span>
+                            </div>
+                            <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                                <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$45,000</span>
+                                <div class="flex items-end w-full">
+                                    <div class="relative flex justify-center flex-grow h-10 bg-indigo-200"></div>
+                                    <div class="relative flex justify-center flex-grow h-6 bg-indigo-300"></div>
+                                    <div class="relative flex justify-center flex-grow h-20 bg-indigo-400"></div>
+                                </div>
+                                <span class="absolute bottom-0 text-xs font-bold">Feb</span>
+                            </div>
+                            <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                                <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$47,500</span>
+                                <div class="flex items-end w-full">
+                                    <div class="relative flex justify-center flex-grow h-10 bg-indigo-200"></div>
+                                    <div class="relative flex justify-center flex-grow h-8 bg-indigo-300"></div>
+                                    <div class="relative flex justify-center flex-grow h-20 bg-indigo-400"></div>
+                                </div>
+                                <span class="absolute bottom-0 text-xs font-bold">Mar</span>
+                            </div>
+                            <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                                <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$50,000</span>
+                                <div class="flex items-end w-full">
+                                    <div class="relative flex justify-center flex-grow h-10 bg-indigo-200"></div>
+                                    <div class="relative flex justify-center flex-grow h-6 bg-indigo-300"></div>
+                                    <div class="relative flex justify-center flex-grow h-24 bg-indigo-400"></div>
+                                </div>
+                                <span class="absolute bottom-0 text-xs font-bold">Apr</span>
+                            </div>
+                            <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                                <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$47,500</span>
+                                <div class="flex items-end w-full">
+                                    <div class="relative flex justify-center flex-grow h-10 bg-indigo-200"></div>
+                                    <div class="relative flex justify-center flex-grow h-8 bg-indigo-300"></div>
+                                    <div class="relative flex justify-center flex-grow h-20 bg-indigo-400"></div>
+                                </div>
+                                <span class="absolute bottom-0 text-xs font-bold">May</span>
+                            </div>
+                            <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                                <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$55,000</span>
+                                <div class="flex items-end w-full">
+                                    <div class="relative flex justify-center flex-grow h-12 bg-indigo-200"></div>
+                                    <div class="relative flex justify-center flex-grow h-8 bg-indigo-300"></div>
+                                    <div class="relative flex justify-center flex-grow h-24 bg-indigo-400"></div>
+                                </div>
+                                <span class="absolute bottom-0 text-xs font-bold">Jun</span>
+                            </div>
+                            <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                                <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$60,000</span>
+                                <div class="flex items-end w-full">
+                                    <div class="relative flex justify-center flex-grow h-12 bg-indigo-200"></div>
+                                    <div class="relative flex justify-center flex-grow h-16 bg-indigo-300"></div>
+                                    <div class="relative flex justify-center flex-grow h-20 bg-indigo-400"></div>
+                                </div>
+                                <span class="absolute bottom-0 text-xs font-bold">Jul</span>
+                            </div>
+                            <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                                <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$57,500</span>
+                                <div class="flex items-end w-full">
+                                    <div class="relative flex justify-center flex-grow h-12 bg-indigo-200"></div>
+                                    <div class="relative flex justify-center flex-grow h-10 bg-indigo-300"></div>
+                                    <div class="relative flex justify-center flex-grow h-24 bg-indigo-400"></div>
+                                </div>
+                                <span class="absolute bottom-0 text-xs font-bold">Aug</span>
+                            </div>
+                            <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                                <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$67,500</span>
+                                <div class="flex items-end w-full">
+                                    <div class="relative flex justify-center flex-grow h-12 bg-indigo-200"></div>
+                                    <div class="relative flex justify-center flex-grow h-10 bg-indigo-300"></div>
+                                    <div class="relative flex justify-center flex-grow h-32 bg-indigo-400"></div>
+                                </div>
+                                <span class="absolute bottom-0 text-xs font-bold">Sep</span>
+                            </div>
+                            <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                                <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$65,000</span>
+                                <div class="flex items-end w-full">
+                                    <div class="relative flex justify-center flex-grow h-12 bg-indigo-200"></div>
+                                    <div class="relative flex justify-center flex-grow h-12 bg-indigo-300"></div>
+                                    <div class="relative flex justify-center flex-grow bg-indigo-400 h-28"></div>
+                                </div>
+                                <span class="absolute bottom-0 text-xs font-bold">Oct</span>
+                            </div>
+                            <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                                <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$70,000</span>
+                                <div class="flex items-end w-full">
+                                    <div class="relative flex justify-center flex-grow h-8 bg-indigo-200"></div>
+                                    <div class="relative flex justify-center flex-grow h-8 bg-indigo-300"></div>
+                                    <div class="relative flex justify-center flex-grow h-40 bg-indigo-400"></div>
+                                </div>
+                                <span class="absolute bottom-0 text-xs font-bold">Nov</span>
+                            </div>
+                            <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                                <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$75,000</span>
+                                <div class="flex items-end w-full">
+                                    <div class="relative flex justify-center flex-grow h-12 bg-indigo-200"></div>
+                                    <div class="relative flex justify-center flex-grow h-8 bg-indigo-300"></div>
+                                    <div class="relative flex justify-center flex-grow h-40 bg-indigo-400"></div>
+                                </div>
+                                <span class="absolute bottom-0 text-xs font-bold">Dec</span>
+                            </div>
+                        </div>
+                        <div class="flex w-full mt-3">
+                            <div class="flex items-center ml-auto">
+                                <span class="block w-4 h-4 bg-indigo-400"></span>
+                                <span class="ml-1 text-xs font-medium">Existing</span>
+                            </div>
+                            <div class="flex items-center ml-4">
+                                <span class="block w-4  h-4 bg-indigo-300"></span>
+                                <span class="ml-1 text-xs font-medium">Upgrades</span>
+                            </div>
+                            <div class="flex items-center ml-4">
+                                <span class="block w-4  h-4 bg-indigo-200"></span>
+                                <span class="ml-1 text-xs font-medium">New</span>
+                            </div>
+                        </div>
+                    </div> */}
+                    
                     <div class="grid grid-cols-2 gap-4 mb-4">
                         <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
                             <p class="text-2xl text-gray-400 dark:text-gray-500">
