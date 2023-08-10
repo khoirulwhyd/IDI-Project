@@ -9,6 +9,7 @@ import DashboardNew from './Pages/DashboardNew';
 import Login from "./Pages/Auth/Login"
 import Indexdatakeanggotaan from "./Pages/DataKeanggotan/Indexdatakeanggotaan";
 import DataPribadi from "./Pages/PersonalData/DataPribadi";
+import EditKeanggotaan from "./Pages/DataKeanggotan/editDatakeanggotaan";
 
 //import component
 import Sidebar from "./Components/Sidebar";
@@ -25,7 +26,7 @@ export default function App() {
 
           <Route path="/keanggotaan" element={<Indexdatakeanggotaan />} />
           <Route path="/datapribadi" element={<DataPribadi />} />
-
+          <Route path="/editDatakeanggotaan" element={<EditKeanggotaan />} />
           <Route path='/sidebar' element={<Sidebar />} />
 
         </Routes>
