@@ -20,6 +20,9 @@ import {
     Cog6ToothIcon,
     InboxIcon,
     PowerIcon,
+    DocumentChartBarIcon,
+    UserGroupIcon,
+    DocumentCheckIcon,
 } from "@heroicons/react/24/solid";
 import {
     Chart,
@@ -115,7 +118,7 @@ export default function Dashboard2() {
                             </ListItem> 
                             <ListItem>
                                 <ListItemPrefix>
-                                    <UserCircleIcon className="h-5 w-5" />
+                                    <UserGroupIcon className="h-5 w-5" />
                                 </ListItemPrefix>
                                 Data Keanggotaan
                             </ListItem> 
@@ -179,7 +182,7 @@ export default function Dashboard2() {
                                 <ListItem className="p-0" selected={open === 2}>
                                     <AccordionHeader onClick={() => handleOpen(2)} className="border-b-0 p-3">
                                         <ListItemPrefix>
-                                            <ShoppingBagIcon className="h-5 w-5" />
+                                            <DocumentCheckIcon className="h-5 w-5" />
                                         </ListItemPrefix>
                                         <Typography color="blue-gray" className="mr-auto font-normal text-sm">
                                             STR dan SIP
