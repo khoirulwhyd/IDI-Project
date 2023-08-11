@@ -94,6 +94,12 @@ export default function Dashboard2() {
                                         </svg>
                                     </div>
                                 </button>
+                                <div className="jusfity-end py-2">
+                                    <button className="px-2 py-2">
+                                        <span class="text-primary-600">Lupa Password ?</span>
+                                    </button>
+                                </div>
+                                
                                 <p class="mt-6 text-xs text-gray-600 text-center">
                                     I agree to abide by templatana's
                                     <a href="#" class="border-b border-gray-500 border-dotted">
