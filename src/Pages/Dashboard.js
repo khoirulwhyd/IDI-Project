@@ -31,7 +31,67 @@ import {
 import { ChevronRightIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 import { PieChart, Pie, Sector, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 
-
+// import barchart
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Legend } from 'recharts';
+//data barchart
+const persebaranDokter = [
+    {
+        name: 'Page A',
+        skandungan: 4000,
+        sjantung: 2400,
+        smata: 2400,
+        spenyakitdalam: 4000,
+        amt: 2400,
+    },
+    {
+        name: 'Page B',
+        skandungan: 4000,
+        sjantung: 2400,
+        smata: 2400,
+        spenyakitdalam: 4000,
+        amt: 2210,
+    },
+    {
+        name: 'Page C',
+        skandungan: 4000,
+        sjantung: 2400,
+        smata: 2400,
+        spenyakitdalam: 4000,
+        amt: 2290,
+    },
+    {
+        name: 'Page D',
+        skandungan: 4000,
+        sjantung: 2400,
+        smata: 2400,
+        spenyakitdalam: 4000,
+        amt: 2000,
+    },
+    {
+        name: 'Page E',
+        skandungan: 4000,
+        sjantung: 2400,
+        smata: 2400,
+        spenyakitdalam: 4000,
+        amt: 2181,
+    },
+    {
+        name: 'Page F',
+        skandungan: 4000,
+        sjantung: 2400,
+        sjantung: 2400,
+        spenyakitdalam: 4000,
+        amt: 2500,
+    },
+    {
+        name: 'Page G',
+        skandungan: 4000,
+        sjantung: 2400,
+        sjantung: 2400,
+        spenyakitdalam: 4000,
+        amt: 2100,
+    },
+];
 export default function Dashboard() {
     const [open, setOpen] = React.useState(0);
     initTE({ Chart });
@@ -351,7 +411,26 @@ export default function Dashboard() {
                                 </p>
                             </div>
                             <div class="mx-auto w-full overflow-hidden">
-                                
+                                    <BarChart
+                                        width={1024}
+                                        height={300}
+                                        data={persebaranDokter}
+                                        margin={{
+                                            top: 5,
+                                            right: 30,
+                                            bottom: 5,
+                                        }}
+                                    >
+                                        <CartesianGrid strokeDasharray="3 3" />
+                                        <XAxis dataKey="name" />
+                                        <YAxis />
+                                        <Tooltip />
+                                        <Legend />
+                                        <Bar dataKey="skandungan" fill="#8884d8" />
+                                        <Bar dataKey="sjantung" fill="#82ca9d" />
+                                        <Bar dataKey="spenyakitdalam" fill="#82ca9d" />
+                                        <Bar dataKey="smata" fill="#82ca9d" />
+                                    </BarChart>
                             </div>
                             
                         </div>
