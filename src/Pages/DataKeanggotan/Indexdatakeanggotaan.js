@@ -222,11 +222,10 @@ export default function DataKeanggotaan() {
             <div class="p-4 sm:ml-64">
                 <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
                     <div class="grid grid-cols-0 gap-4 mb-4">
-                        {/* Persebaran dokter */}
                         <div class="max-w-full h-screen p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                             <div className="section-icon flex items-start justify-start mb-4">
                                 <p class="text-lg justify-center font-semibold text-gray-800">
-                                    Data Keanggotaan
+                                    Data Profesi
                                 </p>
                             </div>
                             <div className="grid grid-cols-2">

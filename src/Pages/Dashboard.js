@@ -23,6 +23,8 @@ import {
     DocumentChartBarIcon,
     UserGroupIcon,
     DocumentCheckIcon,
+    AcademicCapIcon,
+    BuildingOfficeIcon,
 } from "@heroicons/react/24/solid";
 import {
     Chart,
@@ -145,13 +147,7 @@ export default function Dashboard() {
                                     <button type="submit" class="absolute right-0 top-0 mt-3 mr-2">
                                     </button>
                                 </div>
-                                <button type="button" class="h-8 mr-3">
-                                    {/* <span class="_DVAfiyo21kM68EUVzEQ">View notifications</span> */}
-                                    <svg width="25" height="25" viewBox="0 0 35 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M27.281 13.3279C27.281 15.1595 27.7651 16.2391 28.8304 17.4831C29.6377 18.3996 29.8957 19.5761 29.8957 20.8525C29.8957 22.1274 29.4768 23.3377 28.6376 24.3203C27.539 25.4982 25.9896 26.2502 24.4083 26.381C22.1168 26.5763 19.8239 26.7408 17.5006 26.7408C15.1758 26.7408 12.8843 26.6424 10.5928 26.381C9.01009 26.2502 7.4607 25.4982 6.36352 24.3203C5.52432 23.3377 5.104 22.1274 5.104 20.8525C5.104 19.5761 5.36344 18.3996 6.1693 17.4831C7.26793 16.2391 7.72014 15.1595 7.72014 13.3279V12.7066C7.72014 10.2538 8.33178 8.64988 9.59129 7.07976C11.4639 4.78993 14.4656 3.41663 17.4353 3.41663H17.5658C20.5993 3.41663 23.6981 4.85603 25.5388 7.24426C26.7331 8.78207 27.281 10.3184 27.281 12.7066V13.3279ZM13.2323 29.7553C13.2323 29.021 13.9062 28.6846 14.5295 28.5407C15.2585 28.3864 19.7009 28.3864 20.4299 28.5407C21.0531 28.6846 21.7271 29.021 21.7271 29.7553C21.6909 30.4545 21.2807 31.0743 20.714 31.4679C19.9791 32.0408 19.1168 32.4036 18.2153 32.5343C17.7167 32.5989 17.2268 32.6004 16.7456 32.5343C15.8426 32.4036 14.9802 32.0408 14.2468 31.4665C13.6787 31.0743 13.2685 30.4545 13.2323 29.7553Z" fill="#212529" />
-                                        <circle cx="27.5" cy="10" r="5.5" fill="#E00F0F" />
-                                    </svg>
-                                </button>
+                                
                                 <div>
                                     <button type="button" class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" aria-expanded="false" data-dropdown-toggle="dropdown-user">
                                         <span class="sr-only">Open user menu</span>
@@ -217,7 +213,7 @@ export default function Dashboard() {
                                 <ListItem className="p-0" selected={open === 1}>
                                     <AccordionHeader onClick={() => handleOpen(1)} className="border-b-0 p-3">
                                         <ListItemPrefix>
-                                            <PresentationChartBarIcon className="h-5 w-5" />
+                                            <BuildingOfficeIcon className="h-5 w-5" />
                                         </ListItemPrefix>
                                         <Typography color="blue-gray" className="mr-auto font-normal text-sm">
                                             Data Profesi
@@ -236,19 +232,16 @@ export default function Dashboard() {
                                             <ListItemPrefix>
                                                 <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
                                             </ListItemPrefix>
-                                            Data Pendidikan
+                                            Dokter Spesialis
                                         </ListItem>
-                                        <ListItem className="text-sm">
-                                            <ListItemPrefix>
-                                                <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
-                                            </ListItemPrefix>
-                                            Data Pekerjaan
-                                        </ListItem>
+                                        
                                     </List>
                                 </AccordionBody>
                             </Accordion>
+
+                            {/* dataakademis */}
                             <Accordion
-                                open={open === 3}
+                                open={open === 2}
                                 icon={
                                     <ChevronDownIcon
                                         strokeWidth={2.5}
@@ -256,12 +249,44 @@ export default function Dashboard() {
                                     />
                                 }
                             >
-                                <ListItem>
-                                    <ListItemPrefix>
-                                        <Cog6ToothIcon className="h-5 w-5" />
-                                    </ListItemPrefix>
-                                    Data Praktik
+                                <ListItem className="p-0" selected={open === 2}>
+                                    <AccordionHeader onClick={() => handleOpen(2)} className="border-b-0 p-3">
+                                        <ListItemPrefix>
+                                            <AcademicCapIcon className="h-5 w-5" />
+                                        </ListItemPrefix>
+                                        <Typography color="blue-gray" className="mr-auto font-normal text-sm">
+                                            Data Akademis
+                                        </Typography>
+                                    </AccordionHeader>
                                 </ListItem>
+                                <AccordionBody className="py-1">
+                                    <List className="p-0">
+                                        <ListItem className="text-sm">
+                                            <ListItemPrefix>
+                                                <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
+                                            </ListItemPrefix>
+                                            Akademis S2
+                                        </ListItem>
+                                        <ListItem className="text-sm">
+                                            <ListItemPrefix>
+                                                <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
+                                            </ListItemPrefix>
+                                            Akademis S3
+                                        </ListItem>
+
+                                    </List>
+                                </AccordionBody>
+                            </Accordion>
+                            {/* end sidebar akademis */}
+                            <Accordion
+                                open={open === 3}
+                                icon={
+                                    <ChevronDownIcon
+                                        strokeWidth={2.5}
+                                        className={`mx-auto h-4 w-4 transition-transform ${open === 3 ? "rotate-180" : ""}`}
+                                    />
+                                }
+                            >
                                 <ListItem className="p-0" selected={open === 3}>
                                     <AccordionHeader onClick={() => handleOpen(3)} className="border-b-0 p-3">
                                         <ListItemPrefix>
@@ -278,23 +303,18 @@ export default function Dashboard() {
                                             <ListItemPrefix>
                                                 <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
                                             </ListItemPrefix>
-                                            STR
+                                            Surat Tanda Registrasi
                                         </ListItem>
                                         <ListItem className="text-sm">
                                             <ListItemPrefix>
                                                 <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
                                             </ListItemPrefix>
-                                            SIP
+                                            Surat izin Praktik
                                         </ListItem>
                                     </List>
                                 </AccordionBody>
                             </Accordion>
                         </List>
-                        
-                                
-                        
-                        
-                        
                     </ul>
                 </div>
             </aside>
@@ -389,10 +409,6 @@ export default function Dashboard() {
                                 </div>
                             </a>
                         </div>
-
-
-                        
-                        
                     </div>
                     <div class="grid grid-cols-0 gap-4 mb-4">
                         {/* Persebaran dokter */}
