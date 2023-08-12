@@ -1,5 +1,7 @@
 import "../css/Login.css";
-export default function Dashboard2() {
+import { Link } from "react-router-dom";
+
+export default function Login() {
     return (
         // <body>
         <div class="min-h-screen bg-gray-100 text-gray-900 flex justify-center">
@@ -78,10 +80,13 @@ export default function Dashboard2() {
                             <div class="mx-auto max-w-sm justify-center">
                                 <input
                                     class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
-                                    type="email" placeholder="Email" />
+                                    type="email" placeholder="Masukkan NIK" />
                                 <input
                                     class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
                                     type="password" placeholder="Password" />
+                                <input
+                                    class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
+                                    type="Kode Verifiaksi" placeholder="Masukkan Kode Verfikasi" />
                                 <button
                                     class=" mt-5 tracking-wide font-semibold bg-primary-600 text-gray-100 w-full py-4 rounded-lg hover:bg-primary-800 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
                                     <span class="ml-3">
@@ -96,11 +101,21 @@ export default function Dashboard2() {
                                 </button>
                                 <div className="jusfity-end py-2">
                                     <button className="px-2 py-2">
-                                        <span class="text-primary-600">Lupa Password ?</span>
+                                        <span class="text-primary-600 underline">Lupa Password ?</span>
                                     </button>
                                 </div>
+
+                                <div className="flex jusfity-end py-6">
+                                    <span class="text-gray-600 ">Belum Memiliki Akun ? </span>
+                                    <Link to="/register">
+                                        <button className="px-2">
+                                            <span class="text-primary-600 font-semibold underline">Daftar Sekarang</span>
+                                        </button>
+                                    </Link>
+                                    
+                                </div>
                                 
-                                <p class="mt-6 text-xs text-gray-600 text-center">
+                                {/* <p class="mt-6 text-xs text-gray-600 text-center">
                                     I agree to abide by templatana's
                                     <a href="#" class="border-b border-gray-500 border-dotted">
                                         Terms of Service
@@ -109,7 +124,7 @@ export default function Dashboard2() {
                                     <a href="#" class="border-b border-gray-500 border-dotted">
                                         Privacy Policy
                                     </a>
-                                </p>
+                                </p> */}
                             </div>
                         </div>
                     </div>

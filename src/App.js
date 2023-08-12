@@ -10,15 +10,21 @@ import EditKeanggotaan from "./Pages/DataKeanggotan/editDatakeanggotaan";
 
 //import component
 import Sidebar from "./Components/Sidebar";
+import Register from "./Pages/Auth/Register";
 
 export default function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
+          {/* auth routes */}
+          <Route path='/login' element={<Login />} />
+          <Route path='/register' element={<Register />} />
+
+
           <Route path='/' element={<Login />} />
           <Route path='/dashboard' element={<Dashboard/>} />
-          <Route path='/login' element={<Login />} />
+          
           {/* <Route path='*' element={<Navigate to='/home' replace />} /> */}
 
           <Route path="/keanggotaan" element={<Indexdatakeanggotaan />} />

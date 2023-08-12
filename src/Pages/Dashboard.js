@@ -203,7 +203,7 @@ export default function Dashboard() {
                                 <ListItemPrefix>
                                     <UserGroupIcon className="h-5 w-5" />
                                 </ListItemPrefix>
-                                Data Keanggotaan
+                                Data Pribadi
                             </ListItem> 
                             <Accordion
                                 open={open === 1}
@@ -220,7 +220,7 @@ export default function Dashboard() {
                                             <PresentationChartBarIcon className="h-5 w-5" />
                                         </ListItemPrefix>
                                         <Typography color="blue-gray" className="mr-auto font-normal text-sm">
-                                            Personal Data
+                                            Data Profesi
                                         </Typography>
                                     </AccordionHeader>
                                 </ListItem>
@@ -230,7 +230,7 @@ export default function Dashboard() {
                                             <ListItemPrefix>
                                                 <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
                                             </ListItemPrefix>
-                                            Data Pribadi
+                                            Dokter Umum
                                         </ListItem>
                                         <ListItem className="text-sm">
                                             <ListItemPrefix>
@@ -248,7 +248,7 @@ export default function Dashboard() {
                                 </AccordionBody>
                             </Accordion>
                             <Accordion
-                                open={open === 2}
+                                open={open === 3}
                                 icon={
                                     <ChevronDownIcon
                                         strokeWidth={2.5}
@@ -262,8 +262,8 @@ export default function Dashboard() {
                                     </ListItemPrefix>
                                     Data Praktik
                                 </ListItem>
-                                <ListItem className="p-0" selected={open === 2}>
-                                    <AccordionHeader onClick={() => handleOpen(2)} className="border-b-0 p-3">
+                                <ListItem className="p-0" selected={open === 3}>
+                                    <AccordionHeader onClick={() => handleOpen(3)} className="border-b-0 p-3">
                                         <ListItemPrefix>
                                             <DocumentCheckIcon className="h-5 w-5" />
                                         </ListItemPrefix>
