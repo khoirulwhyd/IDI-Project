@@ -5,11 +5,14 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 //import page & components
 import Dashboard from './Pages/Dashboard';
 import Login from "./Pages/Auth/Login"
-import Indexdatakeanggotaan from "./Pages/DataKeanggotan/Indexdatakeanggotaan";
-import EditKeanggotaan from "./Pages/DataKeanggotan/editDatakeanggotaan";
 
 //data profesi -> dokter spesialis
 import IndexSpesialis from "./Pages/DataProfesi/DokterSpesialis/IndexSpesialis";
+
+//data pribadi
+import IndexDatapribadi from "./Pages/DataPribadi/IndexDatapribadi";
+import EditDataPribadi from "./Pages/DataPribadi/EditDatapribadi"
+import CreateDatapribadi from "./Pages/DataPribadi/CreateDatapribadi";
 
 //import component
 import Sidebar from "./Components/Sidebar";
@@ -31,9 +34,11 @@ export default function App() {
           
           {/* <Route path='*' element={<Navigate to='/home' replace />} /> */}
 
-          <Route path="/keanggotaan" element={<Indexdatakeanggotaan />} />
-          <Route path="/editDatakeanggotaan" element={<EditKeanggotaan />} />
-
+          {/* data pribadi routes */}
+          <Route path='/datapribadi' element={<IndexDatapribadi />} />
+          <Route path='/editdatapribadi' element={<EditDataPribadi />} />
+          <Route path='/createdatapribadi' element={<CreateDatapribadi />} />
+          {/* data pribadi routes */}
           {/* dataprofesiroutes -<Route path="/keanggotaan" element={<Indexdatakeanggotaan />} />> dokter spesialis */}
           <Route path="/dokterspesialis" element={<IndexSpesialis />} />
 
