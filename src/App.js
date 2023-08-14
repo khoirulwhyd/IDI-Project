@@ -19,6 +19,11 @@ import Sidebar from "./Components/Sidebar";
 import Sidebard from "./Components/SidebarData";
 import Register from "./Pages/Auth/Register";
 
+
+//
+
+import User from "./Layouts/User";
+
 export default function App() {
   return (
     <>
@@ -45,6 +50,9 @@ export default function App() {
           <Route path='/sidebar' element={<Sidebar />} />
           <Route path='/sidebard' element={<Sidebard />} />
 
+
+          {/* NEW */}
+          <Route path="/user" element={<User />} />
         </Routes>
       </BrowserRouter>
     </>
