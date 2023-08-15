@@ -1,5 +1,5 @@
 import React from "react";
-import "./css/dashboard.css";
+import "../Layouts/css/dashboard.css";
 
 import {Typography,Button,List,ListItem,ListItemPrefix,Menu,MenuHandler,MenuList,MenuItem,Avatar,Accordion,AccordionHeader,AccordionBody,
 } from "@material-tailwind/react";

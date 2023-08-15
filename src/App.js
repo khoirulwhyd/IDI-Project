@@ -4,25 +4,29 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 //import page & components
 import Dashboard from './Pages/Dashboard';
-import Login from "./Pages/Auth/Login"
+
 
 //data profesi -> dokter spesialis
 import IndexSpesialis from "./Pages/DataProfesi/DokterSpesialis/IndexSpesialis";
 
 //data pribadi
-import IndexDatapribadi from "./Pages/DataPribadi/IndexDatapribadi";
-import EditDataPribadi from "./Pages/DataPribadi/EditDatapribadi"
-import CreateDatapribadi from "./Pages/DataPribadi/CreateDatapribadi";
+
 
 //import component
-import Sidebar from "./Components/Sidebar";
-import Sidebard from "./Components/SidebarData";
-import Register from "./Pages/Auth/Register";
+
 
 
 //
 
-import User from "./Layouts/User";
+import Navbar from "./Component/Nav/Navbar"
+import DashboardUser from "./Layouts/DashboardUser";
+import Sidebar from "./Components/Sidebar";
+// Auth
+import Register from "./Layouts/Auth/Register";
+import Login from "./Layouts/Auth/Login";
+//data pribadi
+import IndexDatapribadi from "./Layouts/DataPribadi/IndexDatapribadi";
+import EditDataPribadi from "./Layouts/DataPribadi/EditDatapribadi"
 
 export default function App() {
   return (
@@ -42,17 +46,16 @@ export default function App() {
           {/* data pribadi routes */}
           <Route path='/datapribadi' element={<IndexDatapribadi />} />
           <Route path='/editdatapribadi' element={<EditDataPribadi />} />
-          <Route path='/createdatapribadi' element={<CreateDatapribadi />} />
           {/* data pribadi routes */}
           {/* dataprofesiroutes -<Route path="/keanggotaan" element={<Indexdatakeanggotaan />} />> dokter spesialis */}
           <Route path="/dokterspesialis" element={<IndexSpesialis />} />
 
           <Route path='/sidebar' element={<Sidebar />} />
-          <Route path='/sidebard' element={<Sidebard />} />
-
+          <Route path='/nav' element={<Navbar />} />
+          {/* <Route path='/dashboard-user' element={<Dashboarduser />} /> */}
 
           {/* NEW */}
-          <Route path="/user" element={<User />} />
+          <Route path='/dashboard-user' element={<DashboardUser />} />
         </Routes>
       </BrowserRouter>
     </>
