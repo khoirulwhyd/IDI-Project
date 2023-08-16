@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Register () {
     return (
@@ -25,7 +26,7 @@ export default function Register () {
                         <img src="https://storage.googleapis.com/devitary-image-host.appspot.com/15846435184459982716-LogoMakr_7POjrN.png"
                             class="w-32 mx-auto" />
                     </div> */}
-                    <div class="mt-2 flex flex-col items-center">
+                    <div class="flex flex-col px-4 md:px-12">
                         <h1 class="text-2xl xl:text-3xl font-extrabold py-2">
                             Registrasi Anggota IDI
                         </h1>
@@ -82,13 +83,13 @@ export default function Register () {
                                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
                                                 NPA IDI
                                             </label>
-                                            <input class="text-sm appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="" type="text" placeholder="Masukkan NPA IDI" />
+                                            <input class="text-sm appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="" type="text" placeholder="Masukkan NPA IDI" />
                                         </div>
                                         <div class="w-full md:w-1/2 px-3 py-2">
                                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
                                                 NIK
                                             </label>
-                                            <input class="text-sm appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Masukkan NIK"/>
+                                            <input class="text-sm appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Masukkan NIK"/>
                                         </div>
                                     </div>
                                     <div class="flex flex-wrap -mx-3 mb-6">
@@ -96,7 +97,7 @@ export default function Register () {
                                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
                                                 Nama Lengkap dan Gelar
                                             </label>
-                                            <input class="text-sm appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="text" placeholder="Masukkan nama lengkap dan gelar"/>
+                                            <input class="text-sm appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded-lg py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="text" placeholder="Masukkan nama lengkap dan gelar"/>
                                                 {/* <p class="text-gray-600 text-xs italic">Make it as long and as crazy as you'd like</p> */}
                                         </div>
                                     </div>
@@ -105,13 +106,13 @@ export default function Register () {
                                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
                                                 No. Telepon
                                             </label>
-                                            <input class="text-sm appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="No. Telpon" />
+                                            <input class="text-sm appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="No. Telpon" />
                                         </div>
                                         <div class="w-full md:w-1/2 px-3">
                                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
                                                 Email
                                             </label>
-                                            <input class="text-sm appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Masukkan Email" />
+                                            <input class="text-sm appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Masukkan Email" />
                                         </div>
                                     </div>
                                     <div class="flex flex-wrap -mx-3 mb-6">
@@ -119,13 +120,13 @@ export default function Register () {
                                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
                                                 Password
                                             </label>
-                                            <input class="text-sm appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="password" placeholder="Doe" />
+                                            <input class="text-sm appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="password" placeholder="Doe" />
                                         </div>
                                         <div class="w-full md:w-1/2 px-3 py-2">
                                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
                                                 Ulangi Password
                                             </label>
-                                            <input class="text-sm appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="password" placeholder="Doe" />
+                                            <input class="text-sm appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="password" placeholder="Doe" />
                                         </div>
                                     </div>
                                     <label class="md:w-2/3 text-gray-600 font-medium">
@@ -146,6 +147,15 @@ export default function Register () {
                                             </svg>
                                         </div>
                                     </button>
+                                    <div className="flex jusfity-end py-6">
+                                        <span class="text-gray-600 ">Sudah memiliki akun ? </span>
+                                        <Link to="/register">
+                                            <button className="px-2">
+                                                <span class="text-primary-600 font-semibold underline">Login</span>
+                                            </button>
+                                        </Link>
+
+                                    </div>
                                 </form>
 
                                 {/* <p class="mt-6 text-xs text-gray-600 text-center">

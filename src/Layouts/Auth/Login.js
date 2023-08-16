@@ -27,8 +27,8 @@ export default function Login() {
                         <img src="https://storage.googleapis.com/devitary-image-host.appspot.com/15846435184459982716-LogoMakr_7POjrN.png"
                             class="w-32 mx-auto" />
                     </div> */}
-                    <div class="mt-12 flex flex-col items-center">
-                        <h1 class="text-2xl xl:text-3xl font-extrabold py-10">
+                    <div class="flex flex-col px-4 md:px-12">
+                        <h1 class="text-2xl xl:text-3xl font-extrabold">
                             Login Anggota IDI
                         </h1>
                         <div class="w-full flex-1 mt-8">
@@ -78,15 +78,31 @@ export default function Login() {
                             </div> */}
 
                             <div class="mx-auto max-w-sm justify-center">
-                                <input
-                                    class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
-                                    type="email" placeholder="Masukkan NIK" />
-                                <input
-                                    class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
-                                    type="password" placeholder="Password" />
-                                <input
-                                    class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
-                                    type="Kode Verifiaksi" placeholder="Masukkan Kode Verfikasi" />
+                                <div class="py-4">
+                                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+                                        NIK
+                                    </label>
+                                    <input class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                                        type="email" placeholder="Masukkan NIK">
+                                    </input>
+                                </div>
+
+                                <div className="py-4">
+                                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+                                        Password
+                                    </label>
+                                    <input class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                                        type="password" placeholder="Masukkan Password">
+                                    </input>
+                                </div>
+                                <div className="py-4">
+                                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+                                        Kode Unik
+                                    </label>
+                                    <input class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                                        type="text" placeholder="Masukkan Kode Unik">
+                                    </input>
+                                </div>
                                 <button
                                     class=" mt-5 tracking-wide font-semibold bg-primary-600 text-gray-100 w-full py-4 rounded-lg hover:bg-primary-800 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
                                     <span class="ml-3">
@@ -100,9 +116,12 @@ export default function Login() {
                                     </div>
                                 </button>
                                 <div className="jusfity-end py-2">
-                                    <button className="px-2 py-2">
-                                        <span class="text-primary-600 underline">Lupa Password ?</span>
-                                    </button>
+                                    <Link to="/lupapassword">
+                                        <button className="px-2 py-2">
+                                            <span class="text-primary-600 underline">Lupa Password ?</span>
+                                        </button>
+                                    </Link>
+                                    
                                 </div>
 
                                 <div className="flex jusfity-end py-6">

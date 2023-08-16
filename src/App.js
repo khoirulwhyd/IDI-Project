@@ -25,6 +25,10 @@ import Sidebar from "./Components/Sidebar";
 // Auth
 import Register from "./Layouts/Auth/Register";
 import Login from "./Layouts/Auth/Login";
+import LupaPassword from "./Layouts/Auth/LupaPassword";
+import VerifikasiEmail from "./Layouts/Auth/VerifikasiEmail";
+
+
 //data pribadi
 import IndexDatapribadi from "./Layouts/DataPribadi/IndexDatapribadi";
 import EditDataPribadi from "./Layouts/DataPribadi/EditDatapribadi"
@@ -37,6 +41,8 @@ export default function App() {
           {/* auth routes */}
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
+          <Route path='/lupapassword' element={<LupaPassword />} />
+          <Route path='/verifikasiemail' element={<VerifikasiEmail />} />
 
 
           <Route path='/' element={<Login />} />
