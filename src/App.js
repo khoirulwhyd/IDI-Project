@@ -12,7 +12,8 @@ import IndexSpesialis from "./Pages/DataProfesi/DokterSpesialis/IndexSpesialis";
 //data pribadi
 
 
-//import component
+//import data profesi
+import DataProfesi from './Layouts/DataProfesi/IndexDataprofesi';
 
 
 
@@ -56,6 +57,8 @@ export default function App() {
 
           {/* NEW */}
           <Route path='/dashboard-user' element={<DashboardUser />} />
+
+          <Route path='/dataprofesi' element={<DataProfesi />} />
         </Routes>
       </BrowserRouter>
     </>
