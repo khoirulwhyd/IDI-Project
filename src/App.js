@@ -42,6 +42,7 @@ import VerifikasiEmail from "./Layouts/Auth/VerifikasiEmail";
 //data pribadi
 import IndexDatapribadi from "./Layouts/DataPribadi/IndexDatapribadi";
 import EditDataPribadi from "./Layouts/DataPribadi/EditDatapribadi"
+import CreateDatapribadi from "./Layouts/DataPribadi/CreateDatapribadi";
 
 //test modall
 import Modaledit from "./Component/Modal/ModalEdit";
@@ -66,6 +67,8 @@ export default function App() {
           {/* data pribadi routes */}
           <Route path='/datapribadi' element={<IndexDatapribadi />} />
           <Route path='/editdatapribadi' element={<EditDataPribadi />} />
+          <Route path='/createdatapribadi' element={<CreateDatapribadi />} />
+
           {/* data pribadi routes */}
           {/* dataprofesiroutes -<Route path="/keanggotaan" element={<Indexdatakeanggotaan />} />> dokter spesialis */}
           <Route path="/dokterspesialis" element={<IndexSpesialis />} />

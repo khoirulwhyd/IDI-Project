@@ -66,54 +66,130 @@ export default function EditDatapribadi() {
                                         Data Pribadi
                                     </p>
                                     <div class="mx-auto justify-center">
-                                        <form class="w-full max-w-lg mt-4">
-                                            
+                                        <form class="w-full max-w-lg mt-6">
                                             <div class="flex flex-wrap -mx-3 mb-6">
-                                                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                                                <div class="w-full md:w-full px-3 mb-6 md:mb-0">
                                                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-                                                        First Name
+                                                        NPA IDI
                                                     </label>
-                                                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane"/>
-                                                        <p class="text-red-500 text-xs italic">Please fill out this field.</p>
-                                                </div>
-                                                <div class="w-full md:w-1/2 px-3">
-                                                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
-                                                        Last Name
-                                                    </label>
-                                                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe"/>
+                                                    <input class="text-sm appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="number" placeholder="Masukkkan NPA IDI" />
                                                 </div>
                                             </div>
-                                            
-                                            <div class="flex flex-wrap -mx-3 mb-2">
-                                                <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                                                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
-                                                        City
+                                            <div class="flex flex-wrap -mx-3 mb-6">
+                                                <div class="w-full md:w-full px-3 mb-6 md:mb-0">
+                                                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="No. Identitas">
+                                                        No Identitas 
                                                     </label>
-                                                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" placeholder="Albuquerque"/>
-                                                </div>
-                                                <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                                                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
-                                                        State
-                                                    </label>
-                                                    <div class="relative">
-                                                        <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
-                                                            <option>New Mexico</option>
-                                                            <option>Missouri</option>
-                                                            <option>Texas</option>
-                                                        </select>
-                                                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                                                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
+                                                    <div className="grid grid-cols-2 gap-2">
+                                                        <div class="w-full md:">
+                                                            <select class="text-sm appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="number" placeholder="Masukkkan NPA IDI">
+                                                                <option>KTP</option>
+                                                                <option>SIM</option>
+                                                                <option>KTA</option>
+                                                            </select>
+                                                        </div>
+                                                        <div>
+                                                            <input class="text-sm appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="number" placeholder="Masukkan Nomer Identitas" />
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                                                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
-                                                        Zip
+                                            </div>
+                                            <div class="flex flex-wrap -mx-3 mb-6">
+                                                <div class="w-full md:w-full px-3 mb-6 md:mb-0">
+                                                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+                                                        Nama Lengkap Beserta Gelar
                                                     </label>
-                                                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-zip" type="text" placeholder="90210"/>
+                                                    <input class="text-sm appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Masukkkan nama lengkap beserta gelar" />
                                                 </div>
                                             </div>
+                                            <div class="mb-6">
+                                                <label for="file_input" class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+                                                    Foto terbaru
+                                                </label>
+                                                <input class="block w-full md:w-full text-sm text-gray-500 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="file_input" type="file" />
+                                                <p class="py-2 text-red-500 text-xs italic">Ukuran maksimal file 1 MB, Mengikuti Tahun Lahir, Genap Background Biru, Ganjil Background Merah</p>
+                                            </div>
+                                            <div class="flex flex-wrap -mx-3 mb-6">
+                                                <div class="w-full md:w-full px-3 mb-6 md:mb-0">
+                                                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="No. Identitas">
+                                                        Tempat Tanggal Lahir
+                                                    </label>
+                                                    <div className="grid grid-cols-2 gap-2">
+                                                        <div class="w-full md:">
+                                                            <select class="text-sm appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="number" placeholder="Masukkkan NPA IDI">
+                                                                <option>KTP</option>
+                                                                <option>SIM</option>
+                                                                <option>KTA</option>
+                                                            </select>
+                                                        </div>
+                                                        <div>
+                                                            <input class="text-sm appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="number" placeholder="Masukkan Nomer Identitas" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex flex-wrap -mx-3 mb-6">
+                                                <div class="w-full md:w-full px-3 mb-6 md:mb-0">
+                                                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="No. Identitas">
+                                                        Jenis Kelamin
+                                                    </label>
+                                                </div>
+                                                <div class="flex items-center pl-6 border border-gray-200 rounded dark:border-gray-700">
+                                                    <input id="bordered-radio-1" type="radio" value="" name="bordered-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                                                    <label for="bordered-radio-1" class="w-full py-4 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Default radio</label>
+                                                </div>
+                                                <div class="flex items-center pl-4 border border-gray-200 rounded dark:border-gray-700">
+                                                    <input checked id="bordered-radio-2" type="radio" value="" name="bordered-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                                                    <label for="bordered-radio-2" class="w-full py-4 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Checked state</label>
+                                                </div>
+                                            </div>
+                                            <div class="flex flex-wrap -mx-3 mb-6">
+                                                <div class="w-full md:w-full px-3 mb-6 md:mb-0">
+                                                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="Kewarganegaraan">
+                                                        Kewarganegaraan
+                                                    </label>
+                                                    <div className="w-full">
+                                                        <div class="w-full">
+                                                            <select class="text-sm appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Kewarganegaraan">
+                                                                <option>Indonesia</option>
+                                                                <option>SIM</option>
+                                                                <option>KTA</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex flex-wrap -mx-3 mb-6">
+                                                <div class="w-full md:w-full px-3 mb-6 md:mb-0">
+                                                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="Kewarganegaraan">
+                                                        Agama
+                                                    </label>
+                                                    <div className="w-full">
+                                                        <div class="w-full">
+                                                            <select class="text-sm appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Kewarganegaraan">
+                                                                <option>Islam</option>
+                                                                <option>Kristen</option>
+                                                                <option>Hindu</option>
+                                                                <option>Budha</option>
+                                                                <option>Konghucu</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex flex-wrap -mx-3 mb-6">
+                                                <div class="w-full md:w-full px-3 mb-6 md:mb-0">
+                                                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+                                                        Nama Pasangan
+                                                    </label>
+                                                    <input class="text-sm appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Masukkan nama pasangan" />
+                                                </div>
+                                            </div>
+
+                                            
                                         </form>
+                                        
+                                        {/* baru */}
                                         
                                         
                                         
