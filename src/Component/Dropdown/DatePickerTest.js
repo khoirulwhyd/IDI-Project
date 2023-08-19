@@ -14,6 +14,7 @@ export default function DatePickerTest () {
     return (
         <>
             <Datepicker
+                inputClassName="w-full border-b rounded-lg  font-normal bg-gray-100 placeholder:text-gray-500" 
                 useRange={false}
                 asSingle={true}
                 value={value}
