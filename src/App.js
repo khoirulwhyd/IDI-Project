@@ -44,9 +44,9 @@ import IndexDatapribadi from "./Layouts/DataPribadi/IndexDatapribadi";
 import EditDataPribadi from "./Layouts/DataPribadi/EditDatapribadi"
 import CreateDatapribadi from "./Layouts/DataPribadi/CreateDatapribadi";
 
-//test modall
+//test
 import Modaledit from "./Component/Modal/ModalEdit";
-// import Modal from "./Component/Modal/ModalEdit";
+import DatePickerTest from "./Component/Dropdown/DatePickerTest";
 
 export default function App() {
   return (
@@ -99,6 +99,7 @@ export default function App() {
 
           {/* modal test */}
           <Route path='/modal' element={<Modaledit />} />
+          <Route path='/date' element={<DatePickerTest />} />
 
         </Routes>
       </BrowserRouter>
