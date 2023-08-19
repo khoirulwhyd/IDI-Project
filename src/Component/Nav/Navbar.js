@@ -4,7 +4,7 @@ import UserDropdown from "../Dropdown/UserDropdown";
 export default function Navbar () {
     return (
         <>
-            <nav className="absolute top-0 left-0 w-full z-10 bg-transparent md:flex-row md:flex-nowrap md:justify-start flex items-center p-4">
+            <nav className="absolute top-0 left-0 w-full z-10 bg-transparent md:flex-row md:flex-nowrap md:justify-start flex items-center p-4 bg-white shadow-lg">
                 <div className="w-full mx-autp items-center flex justify-between md:flex-nowrap flex-wrap md:px-10 px-4">
                     {/* Brand */}
                     <a
@@ -12,7 +12,10 @@ export default function Navbar () {
                         href="#pablo"
                         onClick={(e) => e.preventDefault()}
                     >
-                        Dashboard
+                        <a href="#" class="flex ml-2 md:mr-24">
+                            <img src="/Asset/logoidi.png" class="h-8 mr-3" alt="FlowBite Logo" />
+                            <span class="self-center text-sm font-bold text-primary-800 sm:text-sm whitespace-nowrap dark:text-white">IDI Malang Raya</span>
+                        </a>
                     </a>
                     {/* Form */}
                     <form className="md:flex hidden flex-row flex-wrap items-center lg:ml-auto mr-3">

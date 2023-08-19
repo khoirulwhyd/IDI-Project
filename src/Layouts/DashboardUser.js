@@ -27,13 +27,13 @@ export default function DashboardUser() {
 
     return (
         <>
-        <Sidebar />
-            <div className="relative md:ml-64 bg-blueGray-100">
-                <Navbar />
+            <Navbar />
+            <Sidebar />
+            <div className="relative md:ml-64 bg-blueGray-100 mt-4">
                 <div class="p-4">
                     <div class="border-gray-200 border-dashed rounded-lg dark:border-gray-700 md:mt-14">
                         <div class="justify-center md:grid grid-cols-3 gap-4 mb-3">
-                            <div className="relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg">
+                            <div className="relative flex flex-col min-w-0 break-words bg-white rounded-lg mb-6 xl:mb-0 shadow-lg">
                                 <div className="flex-auto p-4">
                                     <div className="flex flex-wrap">
                                         <div className="relative w-full pr-4 max-w-full flex-grow flex-1">
@@ -77,7 +77,7 @@ export default function DashboardUser() {
                                     </a>
                                 </div>
                             </div>
-                            <div className="relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg">
+                            <div className="relative flex flex-col min-w-0 break-words bg-white rounded-lg mb-6 xl:mb-0 shadow-lg">
                                 <div className="flex-auto p-4">
                                     <div className="flex flex-wrap">
                                         <div className="relative w-full pr-4 max-w-full flex-grow flex-1">
@@ -121,7 +121,7 @@ export default function DashboardUser() {
                                     </a>
                                 </div>
                             </div>
-                            <div className="relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg">
+                            <div className="relative flex flex-col min-w-0 break-words bg-white rounded-lg mb-6 xl:mb-0 shadow-lg">
                                 <div className="flex-auto p-4">
                                     <div className="flex flex-wrap">
                                         <div className="relative w-full pr-4 max-w-full flex-grow flex-1">
@@ -168,7 +168,7 @@ export default function DashboardUser() {
                         </div>
                     </div>
                     
-                    <div class="max-w-full h-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <div class="max-w-full h-full p-6 bg-white border border-gray-200 rounded-lg  dark:bg-gray-800 dark:border-gray-700 shadow-lg">
                         {/* <div className="relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg py-12"> */}
                         <div className="section-icon flex items-start justify-start mb-4">
                             <div className="icon">
@@ -202,7 +202,7 @@ export default function DashboardUser() {
                     </div>
                     <div class="gap-4 mb-4 mt-4 md:grid grid-cols-2">
                         {/* Persebaran dokter */}
-                        <div class="max-w-full h-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 md:mt-0">
+                        <div class="max-w-full h-full p-6 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 md:mt-0">
                             <div className="section-icon flex items-start justify-start mb-4">
                                 <div className="icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
@@ -229,7 +229,7 @@ export default function DashboardUser() {
                                 </div>
                                 
                             </div>
-                            <div class="mx-auto w-full md:w-3/5 overflow-hidden">
+                            <div class="mx-auto w-full md:w-3/5 overflow-hidden ">
                                 <PieChart width={350} height={350}>
                                     <Pie
                                         dataKey="value"
@@ -246,7 +246,7 @@ export default function DashboardUser() {
                                 </PieChart>
                             </div>
                         </div>
-                        <div class="mt-3 max-w-full h-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 md:mt-0">
+                        <div class="mt-3 max-w-full h-full p-6 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 md:mt-0 ">
                             <div className="section-icon flex items-start justify-start mb-4">
                                 {/* <div className="icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
@@ -282,8 +282,6 @@ export default function DashboardUser() {
                                             </div>
                                         </a> 
                                     </div>
-
-
                                 </div>
                                 {/* */}
                             </div>
@@ -330,7 +328,7 @@ export default function DashboardUser() {
                         </div>
                     </div>
                     {/* asadd */}
-                    <div class="mt-3 max-w-full h-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 md:mt-0">
+                    <div class="mt-3 max-w-full h-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 md:mt-0 shadow-lg">
                         <div className="section-icon flex items-start justify-start mb-4">
                             <div className="icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">

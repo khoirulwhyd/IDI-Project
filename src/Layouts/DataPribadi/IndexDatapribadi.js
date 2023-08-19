@@ -73,7 +73,7 @@ export default function IndexDatapribadi () {
                                     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                     </thead>
                                     <tbody>
-                                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                        <tr class="bg-white border-b">
                                             <th scope="row" class="py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                                 NPA IDI
                                             </th>
@@ -113,7 +113,7 @@ export default function IndexDatapribadi () {
                                                 Islam
                                             </td>
                                         </tr>
-                                        <tr class="bg-white dark:bg-gray-800">
+                                        <tr class="bg-white border-b dark:bg-gray-800">
                                             <th scope="row" class="py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                                 Nama Pasangan
                                             </th>
@@ -121,6 +121,15 @@ export default function IndexDatapribadi () {
                                                 Ir. H. Muhammad Nur Alif., S.Pd
                                             </td>
                                         </tr>
+                                        {/* <tr class="bg-white dark:bg-gray-800">
+                                            <th scope="row" class="py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                Foto Terbaru
+                                            </th>
+                                            <td class="px-6 py-4">
+                                                <img class="w- h-ull" src="/Asset/fototerbaru.png" alt="user photo" />
+                                            </td>
+                                        </tr> */}
+
                                     </tbody>
                                 </table>
                                 <div className="justify-start pt-4">
@@ -187,6 +196,14 @@ export default function IndexDatapribadi () {
                                             </th>
                                             <td class="px-6 py-4">
                                                 Griya Shanta Blok K.121
+                                            </td>
+                                        </tr>
+                                        <tr class="bg-white dark:bg-gray-800">
+                                            <th scope="row" class="py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                Scan KTP
+                                            </th>
+                                            <td class="px-6 py-4">
+                                                <img class="w-80 h-45" src="/Asset/scan-ktp.png" alt="user photo" />
                                             </td>
                                         </tr>
                                     </tbody>
