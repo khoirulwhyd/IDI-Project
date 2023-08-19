@@ -311,7 +311,34 @@ export default function EditDatapribadi() {
                                     <p class="text-base border-b justify-center font-bold text-gray-800 md:text-lg">
                                         Detail Kontak
                                     </p>
-                                    
+                                    <div class="mx-auto justify-center">
+                                        <form class="w-full max-w-lg mt-6">
+                                            <div class="flex flex-wrap -mx-3 mb-6">
+                                                <div class="w-full md:w-full px-3 mb-6 md:mb-0">
+                                                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+                                                        No. Telpon Rumah
+                                                    </label>
+                                                    <input class="text-sm appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="number" placeholder="Masukkan No Telpon Rumah" />
+                                                </div>
+                                            </div>
+                                            <div className="flex flex-wrap -mx-3 mb-6">
+                                                <div class="w-full md:w-full px-3 mb-6 md:mb-0">
+                                                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+                                                        No. Hp 1
+                                                    </label>
+                                                    <input class="text-sm appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="number" placeholder="Masukkan No Hp" />
+                                                </div>
+                                            </div>
+                                            <div className="flex flex-wrap -mx-3 mb-6">
+                                                <div class="w-full md:w-full px-3 mb-6 md:mb-0">
+                                                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+                                                        No. Hp 2
+                                                    </label>
+                                                    <input class="text-sm appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="number" placeholder="Masukkan No Hp" />
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
                                 
                                 <div className="justify-start pt-4">
@@ -319,6 +346,118 @@ export default function EditDatapribadi() {
                                         Alamat Korespondensi
                                     </p>
                                     
+                                    <div class="mx-auto justify-center">
+                                        <form class="w-full max-w-lg mt-6">
+                                            <div class="flex items-center mb-6">
+                                                <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                                                <label for="default-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Alamat sama dengan KTP</label>
+                                            </div>
+                                            <div class="flex flex-wrap -mx-3 mb-6">
+                                                <div class="w-full md:w-full px-3 mb-6 md:mb-0">
+                                                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="Kewarganegaraan">
+                                                        Provinsi
+                                                    </label>
+                                                    <div className="w-full">
+                                                        <div class="w-full">
+                                                            <select class="text-sm appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Kewarganegaraan">
+                                                                <option>Jawa Timur</option>
+                                                                <option>Jawa Tengah</option>
+                                                                <option>Jawa Barat</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex flex-wrap -mx-3 mb-6">
+                                                <div class="w-full md:w-full px-3 mb-6 md:mb-0">
+                                                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="kab/kota">
+                                                        Kabupaten / Kota
+                                                    </label>
+                                                    <div className="w-full">
+                                                        <div class="w-full">
+                                                            <select class="text-sm appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="kab/kota" type="text" placeholder="Kewarganegaraan">
+                                                                <option>Kab. Malang</option>
+                                                                <option>Kota Malang</option>
+                                                                <option>Bandung</option>
+                                                                <option>Surabaya</option>
+                                                                <option>Madiun</option>
+                                                                <option>Ngawi</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex flex-wrap -mx-3 mb-6">
+                                                <div class="w-full md:w-full px-3 mb-6 md:mb-0">
+                                                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="kecamatan">
+                                                        Kecamatan
+                                                    </label>
+                                                    <div className="w-full">
+                                                        <div class="w-full">
+                                                            <select class="text-sm appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="kecamatan" type="text" placeholder="Kewarganegaraan">
+                                                                <option>Kec. Lowokwaru</option>
+                                                                <option>Kec. Sawojajar</option>
+                                                                <option>Kec. Sukun</option>
+                                                                <option>Kec. Turen</option>
+                                                                <option>Kec. Gondanglegi</option>
+                                                                <option>Kec. Batu</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex flex-wrap -mx-3 mb-6">
+                                                <div class="w-full md:w-full px-3 mb-6 md:mb-0">
+                                                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="kelurahan">
+                                                        Kelurahan
+                                                    </label>
+                                                    <div className="w-full">
+                                                        <div class="w-full">
+                                                            <select class="text-sm appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="kelurahan" type="text" placeholder="kelurahan">
+                                                                <option>Kelurahan Jatimulyo</option>
+                                                                <option>Kec. Sawojajar</option>
+                                                                <option>Kec. Sukun</option>
+                                                                <option>Kec. Turen</option>
+                                                                <option>Kec. Gondanglegi</option>
+                                                                <option>Kec. Batu</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex flex-wrap -mx-3 mb-6">
+                                                <div class="w-full md:w-full px-3 mb-6 md:mb-0">
+                                                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="No. Identitas">
+                                                        RT / RW
+                                                    </label>
+                                                    <div className="grid grid-cols-2 gap-2">
+                                                        <div class="w-full md:">
+                                                            <input class="text-sm appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="number" placeholder="Masukkan RT" />
+                                                        </div>
+                                                        <div>
+                                                            <input class="text-sm appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="number" placeholder="Masukkan RW" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex flex-wrap -mx-3 mb-6">
+                                                <div class="w-full md:w-full px-3 mb-6 md:mb-0">
+                                                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+                                                        Kode Pos
+                                                    </label>
+                                                    <input class="text-sm appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="number" placeholder="Masukkan kode pos" />
+                                                </div>
+                                            </div>
+                                            <div class="flex flex-wrap -mx-3 mb-6">
+                                                <div class="w-full md:w-full px-3 mb-6 md:mb-0">
+                                                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+                                                        Alamat Lengkap
+                                                    </label>
+                                                    <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Masukkan alamat lengkap disini"></textarea>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
                                 
                             </div>
