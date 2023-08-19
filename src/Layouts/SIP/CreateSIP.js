@@ -1,15 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-//components
 import Navbar from "../../Component/Nav/Navbar";
 import Sidebar from "../../Component/Sidebar/Sidebar";
 
-export default function CreateDataprofesi () {
+export default function CreateSIP() {
     return (
         <>
-            <Navbar />
-            <Sidebar />
+        <Navbar />
+        <Sidebar />
             <div class="p-4 sm:ml-64">
                 <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 md:mt-14">
                     <div class="grid grid-cols-0 gap-4 mb-4">
@@ -17,7 +15,7 @@ export default function CreateDataprofesi () {
                         <div class="max-w-full h-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                             <div className="section-icon flex items-start justify-start mb-4">
                                 <p class="text-sm justify-center font-semibold text-gray-800 md:text-lg">
-                                    Data Profesi
+                                    Surat Izin Praktik
                                 </p>
                                 {/* <svg className='ml-2' xmlns="http://www.w3.org/2000/svg" width="6" height="16" viewBox="0 0 9 16" fill="none">
                                     <path d="M1.35283 15.5C1.69764 15.5 2.04426 15.3703 2.30783 15.1109L8.60284 8.94586C8.85738 8.69534 9 8.356 9 8.00067C9 7.64711 8.85738 7.30776 8.60284 7.05725L2.30783 0.888648C1.77888 0.36986 0.923178 0.36986 0.394231 0.892202C-0.132911 1.41454 -0.131106 2.25846 0.397841 2.77725L5.72883 8.00067L0.397841 13.2241C-0.131106 13.7429 -0.132911 14.585 0.394231 15.1074C0.657802 15.3703 1.00622 15.5 1.35283 15.5Z" fill="#212529" />
@@ -39,17 +37,17 @@ export default function CreateDataprofesi () {
                             <div class="justify-start w-full h-full mt-4">
                                 <div className="justify-start py-2">
                                     <p class="text-base border-b justify-center font-bold text-gray-800 md:text-lg">
-                                        Data Profesi
+                                        Data Surat Izin Praktik
                                     </p>
                                     {/* <hr class="mt-2 w-full h-1 py-0 bg-gray-100 border-0 rounded md:my-4 dark:bg-gray-700"></hr> */}
                                 </div>
                                 <div class="mx-auto max-w-sm justify-center mt-10">
                                     <img class="w-1/4" src="/Asset/emptystate.png" className="justify-center items-center" alt="user photo" />
                                     <div className="py-4">
-                                        <p class="text-center ...">Ups, <strong className="text-primary-600">Data Pribadi</strong> Masih Kosong</p>
+                                        <p class="text-center ...">Ups, <strong className="text-primary-600">Data SIPmu</strong> Masih Kosong</p>
                                     </div>
-                                    
-                                    <Link to="/editdataprofesi">
+
+                                    <Link to="/editSIP">
                                         <button
                                             class="py-2 tracking-wide font-semibold bg-primary-600 text-gray-100 w-full py-4 rounded-lg hover:bg-primary-800 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
                                             <div>

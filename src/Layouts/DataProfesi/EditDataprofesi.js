@@ -21,6 +21,12 @@ export default function EditDataprofesi () {
                                 <p class="text-sm justify-center font-semibold text-gray-800 md:text-lg">
                                     Data Profesi
                                 </p>
+                                <svg className='ml-2' xmlns="http://www.w3.org/2000/svg" width="6" height="16" viewBox="0 0 9 16" fill="none">
+                                    <path d="M1.35283 15.5C1.69764 15.5 2.04426 15.3703 2.30783 15.1109L8.60284 8.94586C8.85738 8.69534 9 8.356 9 8.00067C9 7.64711 8.85738 7.30776 8.60284 7.05725L2.30783 0.888648C1.77888 0.36986 0.923178 0.36986 0.394231 0.892202C-0.132911 1.41454 -0.131106 2.25846 0.397841 2.77725L5.72883 8.00067L0.397841 13.2241C-0.131106 13.7429 -0.132911 14.585 0.394231 15.1074C0.657802 15.3703 1.00622 15.5 1.35283 15.5Z" fill="#212529" />
+                                </svg>
+                                <p>
+                                    Edit data profesi
+                                </p>
 
                             </div>
                             <div className="grid grid-cols-1 md:grid-cols-2">

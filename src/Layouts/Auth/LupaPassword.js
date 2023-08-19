@@ -28,7 +28,7 @@ export default function LupaPassword() {
                             class="w-32 mx-auto" />
                     </div> */}
                     <div class="flex flex-col px-4 md:px-12">
-                        <div className="w-full px-4 md:px-2">
+                        <div className="w-full md:px-2">
                             <h1 class="text-2xl xl:text-3xl font-extrabold">
                                 Reset Password
                             </h1>

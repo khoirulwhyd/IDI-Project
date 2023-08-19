@@ -16,8 +16,17 @@ import DataProfesi from './Layouts/DataProfesi/IndexDataprofesi';
 import EditDataprofesi from "./Layouts/DataProfesi/EditDataprofesi";
 import CreateDataprofesi from "./Layouts/DataProfesi/CreateDataprofesi";
 
-// components
+//Surat tanda registrasi
+import IndexSTR from "./Layouts/STR/IndexSTR";
+import EditSTR from "./Layouts/STR/EditSTR";
+import CreateSTR from "./Layouts/STR/CreateSTR";
 
+//sip
+import IndexSIP from "./Layouts/SIP/IndexSIP";
+import EditSIP from "./Layouts/SIP/EditSIP";
+import CreateSIP from "./Layouts/SIP/CreateSIP";
+
+//components
 import Navbar from "./Component/Nav/Navbar"
 import DashboardUser from "./Layouts/DashboardUser";
 import Sidebar from "./Components/Sidebar";
@@ -33,6 +42,10 @@ import VerifikasiEmail from "./Layouts/Auth/VerifikasiEmail";
 //data pribadi
 import IndexDatapribadi from "./Layouts/DataPribadi/IndexDatapribadi";
 import EditDataPribadi from "./Layouts/DataPribadi/EditDatapribadi"
+
+//test modall
+import Modaledit from "./Component/Modal/ModalEdit";
+// import Modal from "./Component/Modal/ModalEdit";
 
 export default function App() {
   return (
@@ -69,6 +82,20 @@ export default function App() {
           <Route path='/dataprofesi' element={<DataProfesi />} />
           <Route path='/editdataprofesi' element={<EditDataprofesi />} />
           <Route path='/createdataprofesi' element={<CreateDataprofesi />} />
+
+          {/* str */}
+          <Route path='/indexSTR' element={<IndexSTR />} />
+          <Route path='/editSTR' element={<EditSTR />} />
+          <Route path='/createSTR' element={<CreateSTR />} />
+
+          {/* sip */}
+          <Route path='/indexSIP' element={<IndexSIP />} />
+          <Route path='/editSIP' element={<EditSIP />} />
+          <Route path='/createSIP' element={<CreateSIP />} />
+
+
+          {/* modal test */}
+          <Route path='/modal' element={<Modaledit />} />
 
         </Routes>
       </BrowserRouter>
