@@ -6,7 +6,6 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 
 //data profesi -> dokter spesialis
-import IndexSpesialis from "./Pages/DataProfesi/DokterSpesialis/IndexSpesialis";
 
 //data pribadi
 
@@ -47,6 +46,7 @@ import CreateDatapribadi from "./Layouts/DataPribadi/CreateDatapribadi";
 //test
 import Modaledit from "./Component/Modal/ModalEdit";
 import DatePickerTest from "./Component/Dropdown/DatePickerTest";
+import PublicLandingpage from "./Layouts/PublicLandingpage";
 
 export default function App() {
   return (
@@ -60,7 +60,7 @@ export default function App() {
           <Route path='/verifikasiemail' element={<VerifikasiEmail />} />
 
 
-          <Route path='/' element={<Login />} />
+          <Route path='/' element={<PublicLandingpage />} />
           
           {/* <Route path='*' element={<Navigate to='/home' replace />} /> */}
 
@@ -68,10 +68,6 @@ export default function App() {
           <Route path='/datapribadi' element={<IndexDatapribadi />} />
           <Route path='/editdatapribadi' element={<EditDataPribadi />} />
           <Route path='/createdatapribadi' element={<CreateDatapribadi />} />
-
-          {/* data pribadi routes */}
-          {/* dataprofesiroutes -<Route path="/keanggotaan" element={<Indexdatakeanggotaan />} />> dokter spesialis */}
-          <Route path="/dokterspesialis" element={<IndexSpesialis />} />
 
           <Route path='/sidebar' element={<Sidebar />} />
           <Route path='/nav' element={<Navbar />} />
