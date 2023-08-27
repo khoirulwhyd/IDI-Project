@@ -2,7 +2,8 @@ import React from "react";
 import './App.css';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
-//import page & components
+// import admin pagesss
+import LoginAdmin from './AdminLayouts/Auth/LoginAdmin';
 
 
 //data profesi -> dokter spesialis
@@ -97,6 +98,9 @@ export default function App() {
           <Route path='/modal' element={<Modaledit />} />
           <Route path='/date' element={<DatePickerTest />} />
 
+
+          {/* admin */}
+          <Route path='/adminLogin' element={<LoginAdmin />} />
         </Routes>
       </BrowserRouter>
     </>
