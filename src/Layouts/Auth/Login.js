@@ -19,7 +19,6 @@ export default function Login() {
                             <h1 class="text-5xl font-bold text-gray-50 justify-start">Malang Raya</h1>
                             <img className="py-14" src="/Asset/Ilustrasi.svg" height={2} width={500}></img>
                         </div>
-                        
                     </div>
                 </div>
                 <div class="lg:w-1/2 xl:w-5/12 p-6 sm:p-24">
@@ -103,18 +102,21 @@ export default function Login() {
                                         type="text" placeholder="Masukkan Kode Unik">
                                     </input>
                                 </div>
-                                <button
-                                    class=" mt-5 tracking-wide font-semibold bg-primary-600 text-gray-100 w-full py-4 rounded-lg hover:bg-primary-800 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
-                                    <span class="ml-3">
-                                        Login
-                                    </span>
-                                    <div className="ml-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 17 14" fill="none">
-                                            <path d="M16.25 7.22571L1.25 7.22571" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M10.2002 1.20131L16.2502 7.22531L10.2002 13.2503" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </div>
-                                </button>
+                                <Link to="/dashboard-user">
+                                    <button
+                                        class=" mt-5 tracking-wide font-semibold bg-primary-600 text-gray-100 w-full py-4 rounded-lg hover:bg-primary-800 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
+                                        <span class="ml-3">
+                                            Login
+                                        </span>
+                                        <div className="ml-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 17 14" fill="none">
+                                                <path d="M16.25 7.22571L1.25 7.22571" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M10.2002 1.20131L16.2502 7.22531L10.2002 13.2503" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </button>
+                                </Link>
+                                
                                 <div className="jusfity-end py-2">
                                     <Link to="/lupapassword">
                                         <button className="px-2 py-2">

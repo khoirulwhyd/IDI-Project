@@ -3,9 +3,10 @@ import './App.css';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 // import admin pagesss
-import LoginAdmin from './AdminLayouts/Auth/LoginAdmin';
-
-
+import AdminLogin from './AdminLayouts/Auth/AdminLogin';
+import AdminDashboard from './AdminLayouts/Dashboard/AdminDashboard';
+import IndexMasterDataAnggota from './AdminLayouts/MasterDataAnggota/indexMasterdataanggota';
+import MintaPersetujuan from './AdminLayouts/MasterDataAnggota/indexMemintaPersetujuan';
 //data profesi -> dokter spesialis
 
 //data pribadi
@@ -100,7 +101,11 @@ export default function App() {
 
 
           {/* admin */}
-          <Route path='/adminLogin' element={<LoginAdmin />} />
+          <Route path='/adminLogin' element={<AdminLogin />} />
+          <Route path='/adminDashboard' element={<AdminDashboard />} />
+          <Route path='/master-data-anggota' element={<IndexMasterDataAnggota />} />
+          <Route path='/meminta-persetujuan' element={<MintaPersetujuan />} />
+
         </Routes>
       </BrowserRouter>
     </>

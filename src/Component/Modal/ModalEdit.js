@@ -31,9 +31,9 @@ export default function Modal() {
                                 </div>
                                 {/*footer*/}
 
-                                <div className="flex items-center justify-center py-4 mb-4">
+                                <div className="flex items-center justify-center py-4 mb-4 gap-2">
                                     <button
-                                        className="text-gray-500 font-bold px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                                        className="text-gray-600 font-bold text-sm px-8 py-4 rounded-lg shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                                         type="button"
                                         onClick={() => setShowModal(false)}
                                     >

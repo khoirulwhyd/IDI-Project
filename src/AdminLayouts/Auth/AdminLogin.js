@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import '../css/Login.css';
 
-export default function Login() {
+export default function AdminLogin() {
     return (
         // <body>
         <div class="min-h-screen bg-gray-100 text-gray-900 flex justify-center">
@@ -20,10 +20,9 @@ export default function Login() {
                             <h1 class="text-5xl font-bold text-gray-50 justify-start">Malang Raya</h1>
                             <img className="py-14" src="/Asset/Ilustrasi.svg" height={2} width={500}></img>
                         </div>
-
                     </div>
                 </div>
-                <div class="mt-24 lg:w-1/2 p-6 sm:p-24">
+                <div class="mt-24 lg:w-5/12 p-6 sm:p-24">
                     <div class="flex flex-col md:px-8">
                         <h1 class="text-2xl xl:text-3xl font-extrabold">
                             Login Admin IDI
@@ -47,6 +46,7 @@ export default function Login() {
                                     </input>
                                 </div>
                                 
+                                <Link to="/adminDashboard">
                                 <button
                                     class=" mt-5 tracking-wide font-semibold bg-primary-600 text-gray-100 w-full py-4 rounded-lg hover:bg-primary-800 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
                                     <span class="ml-3">
@@ -59,6 +59,8 @@ export default function Login() {
                                         </svg>
                                     </div>
                                 </button>
+                                </Link>
+                                
 
 
                                 {/* <p class="mt-6 text-xs text-gray-600 text-center">
