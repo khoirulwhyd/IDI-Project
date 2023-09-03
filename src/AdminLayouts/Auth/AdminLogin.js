@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router";
 import axios from 'axios';
 import { Link } from "react-router-dom";
@@ -9,21 +9,32 @@ function AdminLogin() {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+
+    //define state validation
     const [validation, setValidation] = useState([]);
     const navigate = useNavigate();
 
-    //function login handler
+    useEffect(() => {
+
+        //check token
+        if (localStorage.getItem('token')) {
+
+            //redirect page dashboard
+            navigate('/adminDashboard');
+        }
+    }, []);
+
     const loginHandler = async (e) => {
         e.preventDefault();
 
-        //inisialisasi form data
+        //initialize formData
         const formData = new FormData();
-
+        
         //append data to formData
         formData.append('email', email);
         formData.append('password', password);
 
-        //send data to server
+        //send data
         await axios.post('http://localhost:8000/api/login', formData)
             .then((response) => {
 
@@ -31,15 +42,16 @@ function AdminLogin() {
                 localStorage.setItem('token', response.data.token);
 
                 //redirect to dashboard
-                swal("Success", "Anda Berhasil Login.", "success")
-                navigate("/adminDashboard");
+                swal("Berhasil Login!", "Hallo Admin Selamat Datang!", "success");
+                navigate('/adminDashboard');
             })
             .catch((error) => {
-
+                swal("Gagal!", "Maaf data anda tidak terdeteksi!", "error");
                 //assign error to state "validation"
-                swal("Maaf", "Data anda tidak ditemukan.", "error");
+                setValidation(error.response.data);
             })
-    }
+    };
+    
 
     return (
         // <body>
