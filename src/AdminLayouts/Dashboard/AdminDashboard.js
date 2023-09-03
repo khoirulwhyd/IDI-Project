@@ -43,6 +43,10 @@ function AdminDashboard () {
             navigate('/adminLogin');
         }
         //call function "fetchData"
+        else {
+            fetchData();
+        }
+        
     }, []);
 
     //function logout
@@ -109,7 +113,7 @@ function AdminDashboard () {
                                 </clipPath>
                             </defs>
                         </svg>
-                        <p className="px-2">
+                        <p className="px-2 text-sm font-semibold">
                             {user.name}
                         </p>
                         
