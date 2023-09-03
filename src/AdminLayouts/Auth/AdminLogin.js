@@ -1,8 +1,46 @@
-import React from "react";
+import React, { useState } from 'react';
+import { useNavigate } from "react-router";
+import axios from 'axios';
 import { Link } from "react-router-dom";
 import '../css/Login.css';
+import swal from 'sweetalert';
 
-export default function AdminLogin() {
+function AdminLogin() {
+
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [validation, setValidation] = useState([]);
+    const navigate = useNavigate();
+
+    //function login handler
+    const loginHandler = async (e) => {
+        e.preventDefault();
+
+        //inisialisasi form data
+        const formData = new FormData();
+
+        //append data to formData
+        formData.append('email', email);
+        formData.append('password', password);
+
+        //send data to server
+        await axios.post('http://localhost:8000/api/login', formData)
+            .then((response) => {
+
+                //set token on localStorage
+                localStorage.setItem('token', response.data.token);
+
+                //redirect to dashboard
+                swal("Success", "Anda Berhasil Login.", "success")
+                navigate("/adminDashboard");
+            })
+            .catch((error) => {
+
+                //assign error to state "validation"
+                swal("Maaf", "Data anda tidak ditemukan.", "error");
+            })
+    }
+
     return (
         // <body>
         <div class="min-h-screen bg-gray-100 text-gray-900 flex justify-center">
@@ -28,52 +66,64 @@ export default function AdminLogin() {
                             Login Admin IDI
                         </h1>
                         <div class="w-full flex-1 mt-8">
+                            {
+                                validation.message && (
+                                    <div className="alert alert-danger">
+                                        {validation.message}
+                                    </div>
+                                )
+                            }
+                            <form onSubmit={loginHandler}>
                                 <div class="py-4">
                                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
                                         email
                                     </label>
-                                    <input class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
-                                        type="email" placeholder="Masukkan Email">
+                                    <input class="form-control w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                                        type="email"
+                                        value={email} onChange={(e) => setEmail(e.target.value)}
+                                        placeholder="Masukkan Email">
                                     </input>
                                 </div>
+                                {
+                                    validation.email && (
+                                        <div className="alert alert-danger">
+                                            {validation.email[0]}
+                                        </div>
+                                    )
+                                }
 
                                 <div className="py-4">
                                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
                                         Password
                                     </label>
                                     <input class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
-                                        type="password" placeholder="Masukkan Password">
+                                        type="password"
+                                        value={password} onChange={(e) => setPassword(e.target.value)}
+                                        placeholder="Masukkan Password">
                                     </input>
                                 </div>
-                                
-                                <Link to="/adminDashboard">
-                                <button
-                                    class=" mt-5 tracking-wide font-semibold bg-primary-600 text-gray-100 w-full py-4 rounded-lg hover:bg-primary-800 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
-                                    <span class="ml-3">
-                                        Login
-                                    </span>
-                                    <div className="ml-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 17 14" fill="none">
-                                            <path d="M16.25 7.22571L1.25 7.22571" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M10.2002 1.20131L16.2502 7.22531L10.2002 13.2503" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </div>
-                                </button>
-                                </Link>
-                                
+                                {
+                                    validation.password && (
+                                        <div className="alert alert-danger">
+                                            {validation.password[0]}
+                                        </div>
+                                    )
+                                }
 
-
-                                {/* <p class="mt-6 text-xs text-gray-600 text-center">
-                                    I agree to abide by templatana's
-                                    <a href="#" class="border-b border-gray-500 border-dotted">
-                                        Terms of Service
-                                    </a>
-                                    and its
-                                    <a href="#" class="border-b border-gray-500 border-dotted">
-                                        Privacy Policy
-                                    </a>
-                                </p> */}
-                            
+                                    <button
+                                        type="submit"
+                                        class=" mt-5 tracking-wide font-semibold bg-primary-600 text-gray-100 w-full py-4 rounded-lg hover:bg-primary-800 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
+                                        <span class="ml-3">
+                                            Login
+                                        </span>
+                                        <div className="ml-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 17 14" fill="none">
+                                                <path d="M16.25 7.22571L1.25 7.22571" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M10.2002 1.20131L16.2502 7.22531L10.2002 13.2503" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -83,3 +133,5 @@ export default function AdminLogin() {
         // </body>
     );
 }
+
+export default AdminLogin;
