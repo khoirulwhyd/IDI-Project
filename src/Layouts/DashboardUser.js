@@ -1,6 +1,6 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
-
+import FooterUser from "../Component/Footer/FooterUser";
 
 // import Sidebar from "../Component/Sidebar/Sidebar";
 
@@ -391,7 +391,7 @@ export default function DashboardUser() {
                             </div>
                         </div> 
                     </div>
-                    
+                    <FooterUser />
                 </div>
             </div>
         
